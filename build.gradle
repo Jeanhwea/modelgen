@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo.springsource.org/plugins-release' }
+    }
+    dependencies {
+        classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.7'
+    }
+}
+
+apply plugin: 'propdeps'
+apply plugin: 'java'
+apply plugin: 'propdeps-idea'
+
+group = 'ee.icefire'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+dependencies {
+    // compile group: 'com.github.javaparser', name: 'javaparser-core', version:'2.0.0'
+    provided group: 'oracle', name: 'ojdbc6', version:'11.2.0.4'
+
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    testCompile group: 'com.h2database', name: 'h2', version:'1.4.181'
+    testCompile group: 'org.liquibase', name: 'liquibase-core', version:'3.2.2'
+}
