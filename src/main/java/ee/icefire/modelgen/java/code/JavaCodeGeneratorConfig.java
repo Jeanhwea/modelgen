@@ -4,43 +4,43 @@ import java.io.File;
 
 public class JavaCodeGeneratorConfig {
 
-    protected String directory;
-    protected CodeFormattingConfig codeFormattingConfig = new CodeFormattingConfig();
-    protected boolean includeClassComments;
-    protected boolean includeFieldComments;
+  protected String directory;
+  protected CodeFormattingConfig codeFormattingConfig = new CodeFormattingConfig();
+  protected boolean includeClassComments;
+  protected boolean includeFieldComments;
 
-    public String getDirectory() {
-        return directory;
-    }
+  public String getDirectory() {
+    return directory;
+  }
 
-    public void setDirectory(String directory) {
-        this.directory = directory;
-        if (!this.directory.endsWith(File.separator)) {
-            this.directory += File.separator;
-        }
+  public void setDirectory(String directory) {
+    this.directory = directory;
+    if (!this.directory.endsWith(File.separator)) {
+      this.directory += File.separator;
     }
-    
-    public CodeFormattingConfig getCodeFormattingConfig() {
-        return codeFormattingConfig;
-    }
+  }
 
-    public void setCodeFormattingConfig(CodeFormattingConfig codeFormattingConfig) {
-        this.codeFormattingConfig = codeFormattingConfig;
-    }
+  public CodeFormattingConfig getCodeFormattingConfig() {
+    return codeFormattingConfig;
+  }
 
-    public boolean isIncludeClassComments() {
-        return includeClassComments;
-    }
+  public void setCodeFormattingConfig(CodeFormattingConfig codeFormattingConfig) {
+    this.codeFormattingConfig = codeFormattingConfig;
+  }
 
-    public void setIncludeClassComments(boolean includeClassComments) {
-        this.includeClassComments = includeClassComments;
-    }
+  public boolean isIncludeClassComments() {
+    return includeClassComments;
+  }
 
-    public boolean isIncludeFieldComments() {
-        return includeFieldComments;
-    }
+  public void setIncludeClassComments(boolean includeClassComments) {
+    this.includeClassComments = includeClassComments;
+  }
 
-    public void setIncludeFieldComments(boolean includeFieldComments) {
-        this.includeFieldComments = includeFieldComments;
-    }
+  public boolean isIncludeFieldComments() {
+    return includeFieldComments;
+  }
+
+  public void setIncludeFieldComments(boolean includeFieldComments) {
+    this.includeFieldComments = includeFieldComments;
+  }
 }

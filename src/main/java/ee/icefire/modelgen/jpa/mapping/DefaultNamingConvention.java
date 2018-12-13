@@ -14,29 +14,29 @@ import static ee.icefire.modelgen.jpa.model.AssociationType.isToMany;
  */
 public class DefaultNamingConvention implements NamingConvention {
 
-    protected JpaEntityGeneratorConfig config;
+  protected JpaEntityGeneratorConfig config;
 
-    public DefaultNamingConvention(JpaEntityGeneratorConfig config) {
-        this.config = config;
-    }
+  public DefaultNamingConvention(JpaEntityGeneratorConfig config) {
+    this.config = config;
+  }
 
-    @Override
-    public String entityName(Table table) {
-        String className = null;
-        if (config.getEntityNameOverrides() != null) {
-            className = config.getEntityNameOverrides().get(table.getName());
-        }
-        if (className != null) return className;
-        return StringUtils.toCamelCase(table.getName());
+  @Override
+  public String entityName(Table table) {
+    String className = null;
+    if (config.getEntityNameOverrides() != null) {
+      className = config.getEntityNameOverrides().get(table.getName());
     }
+    if (className != null) return className;
+    return StringUtils.toCamelCase(table.getName());
+  }
 
-    @Override
-    public String propertyName(Column column) {
-        return StringUtils.decapitalize(StringUtils.toCamelCase(column.getName()));
-    }
+  @Override
+  public String propertyName(Column column) {
+    return StringUtils.decapitalize(StringUtils.toCamelCase(column.getName()));
+  }
 
-    @Override
-    public String associationName(Entity relatedEntity, AssociationType associationType) {
-        return StringUtils.decapitalize(relatedEntity.getClassName()) + (isToMany(associationType) ? "s" : "");
-    }
+  @Override
+  public String associationName(Entity relatedEntity, AssociationType associationType) {
+    return StringUtils.decapitalize(relatedEntity.getClassName()) + (isToMany(associationType) ? "s" : "");
+  }
 }

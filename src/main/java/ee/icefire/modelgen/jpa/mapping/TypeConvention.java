@@ -4,6 +4,6 @@ import ee.icefire.modelgen.db.model.Column;
 
 public interface TypeConvention {
 
-    public String typeForColumn(Column column);
+  public String typeForColumn(Column column);
 
 }

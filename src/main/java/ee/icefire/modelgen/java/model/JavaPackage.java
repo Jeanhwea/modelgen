@@ -7,30 +7,30 @@ import java.util.List;
 
 public class JavaPackage implements Serializable {
 
-    public static final JavaPackage DEFAULT_PACKAGE = new JavaPackage("");
-    
-    protected String name;
-    protected List<JavaClass> javaClasses = new ArrayList<>();
+  public static final JavaPackage DEFAULT_PACKAGE = new JavaPackage("");
 
-    public JavaPackage(String name) {
-        this.name = name;
-    }
+  protected String name;
+  protected List<JavaClass> javaClasses = new ArrayList<>();
 
-    public String getName() {
-        return name;
-    }
+  public JavaPackage(String name) {
+    this.name = name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public List<JavaClass> getJavaClasses() {
-        return Collections.unmodifiableList(javaClasses);
-    }
-    
-    public void addJavaClass(JavaClass javaClass) {
-        javaClass.setPackage(this);
-        this.javaClasses.add(javaClass);
-    }
-    
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public List<JavaClass> getJavaClasses() {
+    return Collections.unmodifiableList(javaClasses);
+  }
+
+  public void addJavaClass(JavaClass javaClass) {
+    javaClass.setPackage(this);
+    this.javaClasses.add(javaClass);
+  }
+
 }

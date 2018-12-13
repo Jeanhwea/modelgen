@@ -10,32 +10,32 @@ import ee.icefire.modelgen.db.DatabaseModelGeneratorConfig;
  */
 public class JpaEntityGeneratorConfig extends DatabaseToJpaModelConverterConfig {
 
-    protected JdbcConfig jdbcConfig = new JdbcConfig();
-    protected DatabaseModelGeneratorConfig databaseModelGeneratorConfig = new DatabaseModelGeneratorConfig();
-    protected JavaCodeGeneratorConfig javaCodeGeneratorConfig = new JavaCodeGeneratorConfig();
+  protected JdbcConfig jdbcConfig = new JdbcConfig();
+  protected DatabaseModelGeneratorConfig databaseModelGeneratorConfig = new DatabaseModelGeneratorConfig();
+  protected JavaCodeGeneratorConfig javaCodeGeneratorConfig = new JavaCodeGeneratorConfig();
 
-    public JdbcConfig getJdbcConfig() {
-        return jdbcConfig;
-    }
+  public JdbcConfig getJdbcConfig() {
+    return jdbcConfig;
+  }
 
-    public void setJdbcConfig(JdbcConfig jdbcConfig) {
-        this.jdbcConfig = jdbcConfig;
-    }
+  public void setJdbcConfig(JdbcConfig jdbcConfig) {
+    this.jdbcConfig = jdbcConfig;
+  }
 
-    public DatabaseModelGeneratorConfig getDatabaseModelGeneratorConfig() {
-        return databaseModelGeneratorConfig;
-    }
+  public DatabaseModelGeneratorConfig getDatabaseModelGeneratorConfig() {
+    return databaseModelGeneratorConfig;
+  }
 
-    public void setDatabaseModelGeneratorConfig(DatabaseModelGeneratorConfig databaseModelGeneratorConfig) {
-        this.databaseModelGeneratorConfig = databaseModelGeneratorConfig;
-    }
+  public void setDatabaseModelGeneratorConfig(DatabaseModelGeneratorConfig databaseModelGeneratorConfig) {
+    this.databaseModelGeneratorConfig = databaseModelGeneratorConfig;
+  }
 
-    public JavaCodeGeneratorConfig getJavaCodeGeneratorConfig() {
-        return javaCodeGeneratorConfig;
-    }
+  public JavaCodeGeneratorConfig getJavaCodeGeneratorConfig() {
+    return javaCodeGeneratorConfig;
+  }
 
-    public void setJavaCodeGeneratorConfig(JavaCodeGeneratorConfig javaCodeGeneratorConfig) {
-        this.javaCodeGeneratorConfig = javaCodeGeneratorConfig;
-    }
+  public void setJavaCodeGeneratorConfig(JavaCodeGeneratorConfig javaCodeGeneratorConfig) {
+    this.javaCodeGeneratorConfig = javaCodeGeneratorConfig;
+  }
 
 }

@@ -8,24 +8,24 @@ import java.util.List;
 
 public class JpaModel extends JavaModel {
 
-    protected List<Entity> entities = new ArrayList<Entity>();
+  protected List<Entity> entities = new ArrayList<Entity>();
 
-    public List<Entity> getEntities() {
-        return entities;
-    }
+  public List<Entity> getEntities() {
+    return entities;
+  }
 
-    public Entity findEntity(String entityName) {
-        for (Entity entity : getEntities()) {
-            if (entity.getClassName().equals(entityName)) {
-                return entity;
-            }
-        }
-        throw new RuntimeException("Entity '" + entityName + "' not found");
-    }
-
-    public Entity entity(String entityName, Customizer<Entity> customizer) {
-        Entity entity = findEntity(entityName);
-        customizer.customize(entity);
+  public Entity findEntity(String entityName) {
+    for (Entity entity : getEntities()) {
+      if (entity.getClassName().equals(entityName)) {
         return entity;
+      }
     }
+    throw new RuntimeException("Entity '" + entityName + "' not found");
+  }
+
+  public Entity entity(String entityName, Customizer<Entity> customizer) {
+    Entity entity = findEntity(entityName);
+    customizer.customize(entity);
+    return entity;
+  }
 }

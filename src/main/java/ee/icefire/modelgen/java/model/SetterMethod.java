@@ -8,40 +8,40 @@ import java.util.List;
 
 public class SetterMethod extends Method {
 
-    protected Field field;
-    
-    public SetterMethod(Field field) {
-        super();
-        this.access = AccessModifier.PUBLIC;
-        this.field = field;
-    }
+  protected Field field;
 
-    @Override
-    public String getName() {
-        return deriveSetterName(field.getName());
-    }
+  public SetterMethod(Field field) {
+    super();
+    this.access = AccessModifier.PUBLIC;
+    this.field = field;
+  }
 
-    @Override
-    public String getReturnType() {
-        return null;
-    }
-    
-    protected String generateBody() {
-        return "this." + field.getName() + " = " + field.getName() + ";";
-    }
+  @Override
+  public String getName() {
+    return deriveSetterName(field.getName());
+  }
 
-    @Override
-    public String getBody() {
-        return body != null ? super.getBody() : generateBody();
-    }
+  @Override
+  public String getReturnType() {
+    return null;
+  }
 
-    @Override
-    public List<Argument> getArguments() {
-        return Collections.singletonList(new Argument(field.getType(), field.getName()));
-    }
+  protected String generateBody() {
+    return "this." + field.getName() + " = " + field.getName() + ";";
+  }
 
-    public static String deriveSetterName(String name) {
-        return "set" + StringUtils.capitalize(name);
-    }
+  @Override
+  public String getBody() {
+    return body != null ? super.getBody() : generateBody();
+  }
+
+  @Override
+  public List<Argument> getArguments() {
+    return Collections.singletonList(new Argument(field.getType(), field.getName()));
+  }
+
+  public static String deriveSetterName(String name) {
+    return "set" + StringUtils.capitalize(name);
+  }
 
 }

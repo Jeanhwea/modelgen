@@ -4,201 +4,201 @@ import java.util.Map;
 
 public class DatabaseToJpaModelConverterConfig {
 
-    protected String basePackage;
-    
-    protected boolean convertSchemaToPackage;
+  protected String basePackage;
 
-    protected NamingConvention namingConvention;
-    protected TypeConvention typeConvention;
-    protected JpaModelCustomizer jpaModelCustomizer;
+  protected boolean convertSchemaToPackage;
 
-    protected boolean relationMappingEnabled;
-    protected String entitiesBaseClass;
-    protected String entitiesBaseClassImport;
-    protected boolean entitiesImplementSerializable;
-    protected boolean entitiesIncludeSchema;
-    protected boolean entitiesEqualById;
-    protected boolean useFieldLevelAnnotations;
+  protected NamingConvention namingConvention;
+  protected TypeConvention typeConvention;
+  protected JpaModelCustomizer jpaModelCustomizer;
 
-    protected String sequencePrefix = "";
-    protected String sequenceSuffix = "";    
+  protected boolean relationMappingEnabled;
+  protected String entitiesBaseClass;
+  protected String entitiesBaseClassImport;
+  protected boolean entitiesImplementSerializable;
+  protected boolean entitiesIncludeSchema;
+  protected boolean entitiesEqualById;
+  protected boolean useFieldLevelAnnotations;
 
-    protected Map<String, String> entityNameOverrides;
-    protected Map<String, String> sequenceNameOverrides;
+  protected String sequencePrefix = "";
+  protected String sequenceSuffix = "";
 
-    protected Integer defaultAllocationSize;
-    protected boolean placeAnnotationsOnGetters;
-    protected boolean placeCommentsOnGetters;
-    protected boolean addGeneratedAnnotation = true;
+  protected Map<String, String> entityNameOverrides;
+  protected Map<String, String> sequenceNameOverrides;
 
-    protected boolean generateToStringMethod;
+  protected Integer defaultAllocationSize;
+  protected boolean placeAnnotationsOnGetters;
+  protected boolean placeCommentsOnGetters;
+  protected boolean addGeneratedAnnotation = true;
 
-    public String getBasePackage() {
-        return basePackage;
-    }
+  protected boolean generateToStringMethod;
 
-    public void setBasePackage(String basePackage) {
-        this.basePackage = basePackage;
-    }
+  public String getBasePackage() {
+    return basePackage;
+  }
 
-    public NamingConvention getNamingConvention() {
-        return namingConvention;
-    }
+  public void setBasePackage(String basePackage) {
+    this.basePackage = basePackage;
+  }
 
-    public void setNamingConvention(NamingConvention namingConvention) {
-        this.namingConvention = namingConvention;
-    }
+  public NamingConvention getNamingConvention() {
+    return namingConvention;
+  }
 
-    public TypeConvention getTypeConvention() {
-        return typeConvention;
-    }
+  public void setNamingConvention(NamingConvention namingConvention) {
+    this.namingConvention = namingConvention;
+  }
 
-    public void setTypeConvention(TypeConvention typeConvention) {
-        this.typeConvention = typeConvention;
-    }
+  public TypeConvention getTypeConvention() {
+    return typeConvention;
+  }
 
-    public JpaModelCustomizer getJpaModelCustomizer() {
-        return jpaModelCustomizer;
-    }
+  public void setTypeConvention(TypeConvention typeConvention) {
+    this.typeConvention = typeConvention;
+  }
 
-    public void setJpaModelCustomizer(JpaModelCustomizer jpaModelCustomizer) {
-        this.jpaModelCustomizer = jpaModelCustomizer;
-    }
+  public JpaModelCustomizer getJpaModelCustomizer() {
+    return jpaModelCustomizer;
+  }
 
-    public boolean isConvertSchemaToPackage() {
-        return convertSchemaToPackage;
-    }
+  public void setJpaModelCustomizer(JpaModelCustomizer jpaModelCustomizer) {
+    this.jpaModelCustomizer = jpaModelCustomizer;
+  }
 
-    public void setConvertSchemaToPackage(boolean convertSchemaToPackage) {
-        this.convertSchemaToPackage = convertSchemaToPackage;
-    }
+  public boolean isConvertSchemaToPackage() {
+    return convertSchemaToPackage;
+  }
 
-    public boolean isRelationMappingEnabled() {
-        return relationMappingEnabled;
-    }
+  public void setConvertSchemaToPackage(boolean convertSchemaToPackage) {
+    this.convertSchemaToPackage = convertSchemaToPackage;
+  }
 
-    public void setRelationMappingEnabled(boolean relationMappingEnabled) {
-        this.relationMappingEnabled = relationMappingEnabled;
-    }
+  public boolean isRelationMappingEnabled() {
+    return relationMappingEnabled;
+  }
 
-    public String getEntitiesBaseClass() {
-        return entitiesBaseClass;
-    }
+  public void setRelationMappingEnabled(boolean relationMappingEnabled) {
+    this.relationMappingEnabled = relationMappingEnabled;
+  }
 
-    public void setEntitiesBaseClass(String entitiesBaseClass) {
-        this.entitiesBaseClass = entitiesBaseClass;
-    }
+  public String getEntitiesBaseClass() {
+    return entitiesBaseClass;
+  }
 
-    public String getEntitiesBaseClassImport() {
-        return entitiesBaseClassImport;
-    }
+  public void setEntitiesBaseClass(String entitiesBaseClass) {
+    this.entitiesBaseClass = entitiesBaseClass;
+  }
 
-    public void setEntitiesBaseClassImport(String entitiesBaseClassImport) {
-        this.entitiesBaseClassImport = entitiesBaseClassImport;
-    }
+  public String getEntitiesBaseClassImport() {
+    return entitiesBaseClassImport;
+  }
 
-    public boolean isEntitiesImplementSerializable() {
-        return entitiesImplementSerializable;
-    }
+  public void setEntitiesBaseClassImport(String entitiesBaseClassImport) {
+    this.entitiesBaseClassImport = entitiesBaseClassImport;
+  }
 
-    public void setEntitiesImplementSerializable(boolean entitiesImplementSerializable) {
-        this.entitiesImplementSerializable = entitiesImplementSerializable;
-    }
+  public boolean isEntitiesImplementSerializable() {
+    return entitiesImplementSerializable;
+  }
 
-    public boolean isEntitiesIncludeSchema() {
-        return entitiesIncludeSchema;
-    }
+  public void setEntitiesImplementSerializable(boolean entitiesImplementSerializable) {
+    this.entitiesImplementSerializable = entitiesImplementSerializable;
+  }
 
-    public void setEntitiesIncludeSchema(boolean entitiesIncludeSchema) {
-        this.entitiesIncludeSchema = entitiesIncludeSchema;
-    }
+  public boolean isEntitiesIncludeSchema() {
+    return entitiesIncludeSchema;
+  }
 
-    public boolean isEntitiesEqualById() {
-        return entitiesEqualById;
-    }
+  public void setEntitiesIncludeSchema(boolean entitiesIncludeSchema) {
+    this.entitiesIncludeSchema = entitiesIncludeSchema;
+  }
 
-    public void setEntitiesEqualById(boolean entitiesEqualById) {
-        this.entitiesEqualById = entitiesEqualById;
-    }
+  public boolean isEntitiesEqualById() {
+    return entitiesEqualById;
+  }
 
-    public boolean isUseFieldLevelAnnotations() {
-        return useFieldLevelAnnotations;
-    }
+  public void setEntitiesEqualById(boolean entitiesEqualById) {
+    this.entitiesEqualById = entitiesEqualById;
+  }
 
-    public void setUseFieldLevelAnnotations(boolean useFieldLevelAnnotations) {
-        this.useFieldLevelAnnotations = useFieldLevelAnnotations;
-    }
+  public boolean isUseFieldLevelAnnotations() {
+    return useFieldLevelAnnotations;
+  }
 
-    public Map<String, String> getEntityNameOverrides() {
-        return entityNameOverrides;
-    }
+  public void setUseFieldLevelAnnotations(boolean useFieldLevelAnnotations) {
+    this.useFieldLevelAnnotations = useFieldLevelAnnotations;
+  }
 
-    public void setEntityNameOverrides(Map<String, String> entityNameOverrides) {
-        this.entityNameOverrides = entityNameOverrides;
-    }
+  public Map<String, String> getEntityNameOverrides() {
+    return entityNameOverrides;
+  }
 
-    public Map<String, String> getSequenceNameOverrides() {
-        return sequenceNameOverrides;
-    }
+  public void setEntityNameOverrides(Map<String, String> entityNameOverrides) {
+    this.entityNameOverrides = entityNameOverrides;
+  }
 
-    public void setSequenceNameOverrides(Map<String, String> sequenceNameOverrides) {
-        this.sequenceNameOverrides = sequenceNameOverrides;
-    }
+  public Map<String, String> getSequenceNameOverrides() {
+    return sequenceNameOverrides;
+  }
 
-    public String getSequencePrefix() {
-        return sequencePrefix;
-    }
+  public void setSequenceNameOverrides(Map<String, String> sequenceNameOverrides) {
+    this.sequenceNameOverrides = sequenceNameOverrides;
+  }
 
-    public void setSequencePrefix(String sequencePrefix) {
-        this.sequencePrefix = sequencePrefix;
-    }
+  public String getSequencePrefix() {
+    return sequencePrefix;
+  }
 
-    public String getSequenceSuffix() {
-        return sequenceSuffix;
-    }
+  public void setSequencePrefix(String sequencePrefix) {
+    this.sequencePrefix = sequencePrefix;
+  }
 
-    public void setSequenceSuffix(String sequenceSuffix) {
-        this.sequenceSuffix = sequenceSuffix;
-    }
+  public String getSequenceSuffix() {
+    return sequenceSuffix;
+  }
 
-    public Integer getDefaultAllocationSize() {
-        return defaultAllocationSize;
-    }
+  public void setSequenceSuffix(String sequenceSuffix) {
+    this.sequenceSuffix = sequenceSuffix;
+  }
 
-    public void setDefaultAllocationSize(Integer defaultAllocationSize) {
-        this.defaultAllocationSize = defaultAllocationSize;
-    }
+  public Integer getDefaultAllocationSize() {
+    return defaultAllocationSize;
+  }
 
-    public boolean isPlaceAnnotationsOnGetters() {
-        return placeAnnotationsOnGetters;
-    }
+  public void setDefaultAllocationSize(Integer defaultAllocationSize) {
+    this.defaultAllocationSize = defaultAllocationSize;
+  }
 
-    public void setPlaceAnnotationsOnGetters(boolean placeAnnotationsOnGetters) {
-        this.placeAnnotationsOnGetters = placeAnnotationsOnGetters;
-    }
+  public boolean isPlaceAnnotationsOnGetters() {
+    return placeAnnotationsOnGetters;
+  }
 
-    public boolean isPlaceCommentsOnGetters() {
-        return placeCommentsOnGetters;
-    }
+  public void setPlaceAnnotationsOnGetters(boolean placeAnnotationsOnGetters) {
+    this.placeAnnotationsOnGetters = placeAnnotationsOnGetters;
+  }
 
-    public void setPlaceCommentsOnGetters(boolean placeCommentsOnGetters) {
-        this.placeCommentsOnGetters = placeCommentsOnGetters;
-    }
+  public boolean isPlaceCommentsOnGetters() {
+    return placeCommentsOnGetters;
+  }
 
-    public boolean isAddGeneratedAnnotation() {
-        return addGeneratedAnnotation;
-    }
+  public void setPlaceCommentsOnGetters(boolean placeCommentsOnGetters) {
+    this.placeCommentsOnGetters = placeCommentsOnGetters;
+  }
 
-    public void setAddGeneratedAnnotation(boolean addGeneratedAnnotation) {
-        this.addGeneratedAnnotation = addGeneratedAnnotation;
-    }
+  public boolean isAddGeneratedAnnotation() {
+    return addGeneratedAnnotation;
+  }
 
-    public boolean isGenerateToStringMethod() {
-        return generateToStringMethod;
-    }
+  public void setAddGeneratedAnnotation(boolean addGeneratedAnnotation) {
+    this.addGeneratedAnnotation = addGeneratedAnnotation;
+  }
 
-    public void setGenerateToStringMethod(boolean generateToStringMethod) {
-        this.generateToStringMethod = generateToStringMethod;
-    }
-    
+  public boolean isGenerateToStringMethod() {
+    return generateToStringMethod;
+  }
+
+  public void setGenerateToStringMethod(boolean generateToStringMethod) {
+    this.generateToStringMethod = generateToStringMethod;
+  }
+
 }

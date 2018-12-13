@@ -4,6 +4,6 @@ import ee.icefire.modelgen.jpa.model.JpaModel;
 
 public interface JpaModelCustomizer {
 
-    public void customize(JpaModel jpaModel);
+  public void customize(JpaModel jpaModel);
 
 }

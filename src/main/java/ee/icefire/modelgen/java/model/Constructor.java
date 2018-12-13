@@ -6,31 +6,31 @@ import static java.util.Collections.emptyList;
 
 public class Constructor extends Method {
 
-    public static final String EMPTY_BODY = "// default constructor";
-    
-    protected JavaClass javaClass;
-    protected boolean defaultConstructor = true;
+  public static final String EMPTY_BODY = "// default constructor";
 
-    public Constructor(JavaClass javaClass) {
-        this.javaClass = javaClass;
-    }
+  protected JavaClass javaClass;
+  protected boolean defaultConstructor = true;
 
-    @Override
-    public String getName() {
-        return javaClass.getClassName();
-    }
+  public Constructor(JavaClass javaClass) {
+    this.javaClass = javaClass;
+  }
 
-    @Override
-    public List<Argument> getArguments() {
-        return emptyList();
-    }
+  @Override
+  public String getName() {
+    return javaClass.getClassName();
+  }
 
-    public boolean isDefaultConstructor() {
-        return defaultConstructor;
-    }
+  @Override
+  public List<Argument> getArguments() {
+    return emptyList();
+  }
 
-    @Override
-    public String getBody() {
-        return EMPTY_BODY;
-    }
+  public boolean isDefaultConstructor() {
+    return defaultConstructor;
+  }
+
+  @Override
+  public String getBody() {
+    return EMPTY_BODY;
+  }
 }

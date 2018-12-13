@@ -7,80 +7,80 @@ import java.io.PrintWriter;
  */
 public class CodeWriter {
 
-    protected PrintWriter writer;
-    protected CodeFormattingConfig config;
-    protected int depth  = 0;
+  protected PrintWriter writer;
+  protected CodeFormattingConfig config;
+  protected int depth  = 0;
 
-    public CodeWriter(PrintWriter writer, CodeFormattingConfig config) {
-        this.writer = writer;
-        this.config = config;
-    }
-    
-    public CodeWriter tab() {
-        return print(config.getTab());
-    }
+  public CodeWriter(PrintWriter writer, CodeFormattingConfig config) {
+    this.writer = writer;
+    this.config = config;
+  }
 
-    public CodeWriter tabs(int depth) {
-        while (depth-- > 0) tab();
-        return this;
-    }    
+  public CodeWriter tab() {
+    return print(config.getTab());
+  }
 
-    public CodeWriter eol() {
-        return print(config.getEol());
-    }
+  public CodeWriter tabs(int depth) {
+    while (depth-- > 0) tab();
+    return this;
+  }
 
-    public CodeWriter eos() {
-        return print(";");
-    }
+  public CodeWriter eol() {
+    return print(config.getEol());
+  }
 
-    public CodeWriter eosl() {
-        return print(";").eol();
-    }
+  public CodeWriter eos() {
+    return print(";");
+  }
 
-    public CodeWriter lineStatement(String line) {
-        return print(line).eosl();
-    }
-    
-    public CodeWriter blockStart() {
-        writer.print(" {");
-        depth++;
-        return eol();
-    }
+  public CodeWriter eosl() {
+    return print(";").eol();
+  }
 
-    public CodeWriter blockEnd() {
-        depth--;
-        tabs(depth);
-        writer.print("}");
-        return this;
-    }
+  public CodeWriter lineStatement(String line) {
+    return print(line).eosl();
+  }
 
-    public CodeWriter indent() {
-        return tabs(depth);
-    }
-    
-    public CodeWriter print(String s) {
-        writer.print(s);
-        return this;
-    }
+  public CodeWriter blockStart() {
+    writer.print(" {");
+    depth++;
+    return eol();
+  }
 
-    public CodeWriter println() {
-        return eol();
-    }
+  public CodeWriter blockEnd() {
+    depth--;
+    tabs(depth);
+    writer.print("}");
+    return this;
+  }
 
-    public CodeWriter println(String x) {
-        return print(x).eol();
-    }
+  public CodeWriter indent() {
+    return tabs(depth);
+  }
 
-    public PrintWriter format(String format, Object... args) {
-        return writer.format(format, args);
-    }
+  public CodeWriter print(String s) {
+    writer.print(s);
+    return this;
+  }
 
-    public CodeWriter flush() {
-        writer.flush();
-        return this;
-    }
+  public CodeWriter println() {
+    return eol();
+  }
 
-    public void close() {
-        writer.close();
-    }
+  public CodeWriter println(String x) {
+    return print(x).eol();
+  }
+
+  public PrintWriter format(String format, Object... args) {
+    return writer.format(format, args);
+  }
+
+  public CodeWriter flush() {
+    writer.flush();
+    return this;
+  }
+
+  public void close() {
+    writer.close();
+  }
 }

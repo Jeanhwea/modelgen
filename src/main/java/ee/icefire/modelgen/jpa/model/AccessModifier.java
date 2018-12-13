@@ -2,18 +2,18 @@ package ee.icefire.modelgen.jpa.model;
 
 public enum AccessModifier {
 
-    PUBLIC("public"),
-    PRIVATE("private"),
-    PROTECTED("protected"),
-    PACKAGE("package");
+  PUBLIC("public"),
+  PRIVATE("private"),
+  PROTECTED("protected"),
+  PACKAGE("package");
 
-    private String name;
+  private String name;
 
-    private AccessModifier(String name) {
-        this.name = name;
-    }
+  private AccessModifier(String name) {
+    this.name = name;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 }

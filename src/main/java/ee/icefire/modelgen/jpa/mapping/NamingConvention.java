@@ -7,10 +7,10 @@ import ee.icefire.modelgen.jpa.model.AssociationType;
 
 public interface NamingConvention {
 
-    public String entityName(Table table);
+  public String entityName(Table table);
 
-    public String propertyName(Column column);
+  public String propertyName(Column column);
 
-    public String associationName(Entity relatedEntity, AssociationType associationType);
+  public String associationName(Entity relatedEntity, AssociationType associationType);
 
 }

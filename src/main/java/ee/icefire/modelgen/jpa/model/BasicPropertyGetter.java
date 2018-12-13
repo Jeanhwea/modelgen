@@ -10,15 +10,15 @@ import static java.util.Collections.emptyList;
 
 public class BasicPropertyGetter extends GetterMethod {
 
-    protected BasicProperty basicProperty;
+  protected BasicProperty basicProperty;
 
-    public BasicPropertyGetter(BasicProperty basicProperty) {
-        super(basicProperty);
-        this.basicProperty = basicProperty;
-    }
+  public BasicPropertyGetter(BasicProperty basicProperty) {
+    super(basicProperty);
+    this.basicProperty = basicProperty;
+  }
 
-    @Override
-    protected List<Annotation> generateAnnotations() {
-        return basicProperty.getEntity().isAnnotationsOnGetters() ? basicProperty.generateJpaAnnotations() : emptyList();
-    }
+  @Override
+  protected List<Annotation> generateAnnotations() {
+    return basicProperty.getEntity().isAnnotationsOnGetters() ? basicProperty.generateJpaAnnotations() : emptyList();
+  }
 }

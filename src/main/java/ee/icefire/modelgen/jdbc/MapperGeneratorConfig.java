@@ -4,32 +4,32 @@ import ee.icefire.modelgen.java.code.JavaCodeGeneratorConfig;
 
 public class MapperGeneratorConfig {
 
-    protected JavaCodeGeneratorConfig javaCodeGeneratorConfig = new JavaCodeGeneratorConfig();
-    
-    protected String baseClass;
-    protected String classNameSuffix = "Mapper";
+  protected JavaCodeGeneratorConfig javaCodeGeneratorConfig = new JavaCodeGeneratorConfig();
 
-    public JavaCodeGeneratorConfig getJavaCodeGeneratorConfig() {
-        return javaCodeGeneratorConfig;
-    }
+  protected String baseClass;
+  protected String classNameSuffix = "Mapper";
 
-    public void setJavaCodeGeneratorConfig(JavaCodeGeneratorConfig javaCodeGeneratorConfig) {
-        this.javaCodeGeneratorConfig = javaCodeGeneratorConfig;
-    }
+  public JavaCodeGeneratorConfig getJavaCodeGeneratorConfig() {
+    return javaCodeGeneratorConfig;
+  }
 
-    public String getBaseClass() {
-        return baseClass;
-    }
+  public void setJavaCodeGeneratorConfig(JavaCodeGeneratorConfig javaCodeGeneratorConfig) {
+    this.javaCodeGeneratorConfig = javaCodeGeneratorConfig;
+  }
 
-    public void setBaseClass(String baseClass) {
-        this.baseClass = baseClass;
-    }
+  public String getBaseClass() {
+    return baseClass;
+  }
 
-    public String getClassNameSuffix() {
-        return classNameSuffix;
-    }
+  public void setBaseClass(String baseClass) {
+    this.baseClass = baseClass;
+  }
 
-    public void setClassNameSuffix(String classNameSuffix) {
-        this.classNameSuffix = classNameSuffix;
-    }
+  public String getClassNameSuffix() {
+    return classNameSuffix;
+  }
+
+  public void setClassNameSuffix(String classNameSuffix) {
+    this.classNameSuffix = classNameSuffix;
+  }
 }
