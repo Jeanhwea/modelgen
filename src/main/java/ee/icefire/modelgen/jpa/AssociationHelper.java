@@ -1,7 +1,12 @@
 package ee.icefire.modelgen.jpa;
 
-import ee.icefire.modelgen.jpa.model.*;
 import ee.icefire.modelgen.db.model.Column;
+import ee.icefire.modelgen.jpa.model.Entity;
+import ee.icefire.modelgen.jpa.model.AssociationProperty;
+import ee.icefire.modelgen.jpa.model.Association;
+import ee.icefire.modelgen.jpa.model.AssociationType;
+import ee.icefire.modelgen.jpa.model.FetchType;
+import ee.icefire.modelgen.jpa.model.JpaModel;
 
 
 public class AssociationHelper {
