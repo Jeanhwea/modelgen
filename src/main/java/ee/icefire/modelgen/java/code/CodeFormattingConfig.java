@@ -2,7 +2,7 @@ package ee.icefire.modelgen.java.code;
 
 public class CodeFormattingConfig {
 
-  protected String tab = "    ";
+  protected String tab = "  ";
   protected String eol = "\n";
 
   public String getTab() {
