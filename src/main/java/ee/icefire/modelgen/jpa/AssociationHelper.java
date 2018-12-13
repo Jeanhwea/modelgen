@@ -1,5 +1,9 @@
 package ee.icefire.modelgen.jpa;
 
+import ee.icefire.modelgen.jpa.model.*;
+import ee.icefire.modelgen.db.model.Column;
+
+
 public class AssociationHelper {
 
     protected JpaModel jpaModel;
@@ -34,7 +38,7 @@ public class AssociationHelper {
         if (referencedColumnName != null) {
             referencedColumn = parent.getMappedTable().findColumn(referencedColumnName);
         }
-        
+
         AssociationType associationType = AssociationType.MANY_TO_ONE;
         String name = config.getNamingConvention().associationName(parent, associationType);
         return child.createAssociation(associationType, parent, name).joinColumn(joinColumn, referencedColumn);
